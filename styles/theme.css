@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Pastel Retro Palette */
+  --disco-pink: #FFB7CE;
+  --disco-peach: #FFD1BA;
+  --disco-yellow: #FFF4BD;
+  --disco-mint: #C1E1C1;
+  --disco-purple: #D7B9D5;
+  --disco-orange: #FFB38A;
+  --disco-blue: #B9E2FE;
+  --disco-border: #4A3B37;
+
+  /* Elegant Serif Font System */
+  --font-header: 'Libre Baskerville', serif;
+  --font-main: 'Lora', serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --retro-border: 3px solid var(--disco-border);
+  --retro-shadow: 6px 6px 0px var(--disco-border);
+  --retro-shadow-small: 3px 3px 0px var(--disco-border);
+  --retro-radius: 20px;
+}
