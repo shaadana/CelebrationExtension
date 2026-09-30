@@ -1,0 +1,52 @@
+{
+    "manifest_version": 3,
+    "name": "Celebration Station",
+    "version": "1.5",
+    "description": "Retro browser extension for task celebrations and pomodoro timing.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_title": "Celebration Station"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "scripts/celebration-engine.js",
+                "scripts/pomodoro.js",
+                "content.js"
+            ],
+            "css": [
+                "styles/theme.css",
+                "styles/widget.css",
+                "styles/celebrations.css"
+            ],
+            "run_at": "document_idle",
+            "all_frames": true,
+            "match_about_blank": true
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/*",
+                "scripts/*",
+                "styles/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
